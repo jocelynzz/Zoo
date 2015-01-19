@@ -18,6 +18,8 @@
 @property (nonatomic,strong) NSNumber *age;
 @property (nonatomic,strong) UIImage *image;
 
+-(NSString *)description;
+
 @end
 
 

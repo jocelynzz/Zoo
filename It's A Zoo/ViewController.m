@@ -11,9 +11,9 @@
 #import "NSMutableArray+Shuffle.h"
 
 @interface ViewController ()
-@property (strong, nonatomic) IBOutlet UIScrollView *UIScrollView;
 @property (nonatomic,strong) NSMutableArray *animals;
 @property (weak, nonatomic) IBOutlet UILabel *animalLabel;
+@property (strong, nonatomic) IBOutlet UIScrollView *animalScrollView;
 
 
 @end
@@ -24,18 +24,16 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    self.UIScrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0,30, 320, 500)];
+
+    self.animalScrollView.pagingEnabled = YES;
     
-   // NSlog(@"%@", );
-    self.UIScrollView.pagingEnabled = YES;
+    [self.animalScrollView setContentSize:CGSizeMake(960, 500)];
     
-    [self.UIScrollView setContentSize:CGSizeMake(960, 500)];
-    [self.UIScrollView setContentOffset:CGPointMake(0, self.UIScrollView.contentOffset.x)];
+   // [self.UIScrollView setContentOffset:CGPointMake(0, self.UIScrollView.contentOffset.x)];
+    
     Animal *animal1 = [[Animal alloc]init];
     Animal *animal2 = [[Animal alloc]init];
     Animal *animal3 = [[Animal alloc]init];
-    
-    
     
     animal1.name = @"Minne";
     animal2.name = @"Dollar";
@@ -52,10 +50,8 @@
     animal1.image = [UIImage imageNamed:@"cat.png"];
     animal2.image = [UIImage imageNamed:@"dog.png"];
     animal3.image = [UIImage imageNamed:@"giraffe.png"];
-
-
-
-   NSMutableArray *animals = [[NSMutableArray alloc] init];
+    
+    NSMutableArray *animals = [[NSMutableArray alloc] init];
     [animals addObject:animal1];
     [animals addObject:animal2];
     [animals addObject:animal3];
@@ -66,36 +62,43 @@
    
     UIButton *button;
     UIImage *image;
+    
+    self.animalScrollView.contentSize = CGSizeMake(self.view.frame.size.width * numofAnimals,
+                                                   self.view.frame.size.height);
+    
+    self.animalLabel.text = [[self.animals objectAtIndex:0] name];
   
+    //create three views and add buttons and images to each view
     for (int i = 0; i < numofAnimals; i++) {
         
+        //the staring point of the subview
         CGFloat origin = self.view.frame.size.width * i;
         
+        //size of the subview
         UIView *nView = [[UIView alloc] initWithFrame:CGRectMake(origin, 0, 320, 500)];
-        self.UIScrollView.delegate = self;
-        [self.UIScrollView addSubview:nView];
         
+        //set the delegate to be the viewcontroller
+        self.animalScrollView.delegate = self;
+        
+        //add the subview
+        [self.animalScrollView addSubview:nView];
+        
+        //create buttons
         button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         button.frame = CGRectMake(0, 0, 320, 100);
         button.tag = i;
         
         NSString *bTitle = [[animals objectAtIndex:i] name];
         [button setTitle:bTitle forState:UIControlStateNormal];
-        [nView addSubview: button];
+        [nView addSubview: button]; //add button the subview
         [button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchDown];
         
+        //create images
         image = [[animals objectAtIndex:i] image];
         UIImageView *vImage = [[UIImageView alloc] initWithImage:image];
         vImage.frame = CGRectMake(0, 80, 320, 320);
-        [nView addSubview:vImage];
-        
+        [nView addSubview:vImage]; //add image to the subview
     }
-    self.UIScrollView.contentSize = CGSizeMake(self.view.frame.size.width * numofAnimals,
-                                               self.view.frame.size.height);
-    
-    self.animalLabel.text = [[self.animals objectAtIndex:0] name];
-
-    [self.view addSubview:self.UIScrollView];
 }
 
 -(void)buttonTapped:(UIButton*) sender
@@ -103,7 +106,7 @@
     
     // NSString *tButton= [NSString stringWithFormat: @"%ld", (long)[sender tag]];
     NSInteger i = sender.tag;
-   // NSLog([[self.animals objectAtIndex:i] description]);
+    NSLog(@"%@",[[self.animals objectAtIndex:i] description]);
     NSString *aName = [[self.animals objectAtIndex:i] name];
     NSString *aSpecies = [[self.animals objectAtIndex:i] species];
     NSNumber *aAge = [[self.animals objectAtIndex: i] age];
@@ -114,6 +117,7 @@
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    //current label fades out when we start dragging
     self.animalLabel.alpha = 0.6;
     [UIView animateWithDuration:1.8 delay:0 options:UIViewAnimationOptionCurveEaseIn
                      animations:^{ self.animalLabel.alpha = self.animalLabel.alpha * 0.6/1.8;}
@@ -123,11 +127,13 @@
 
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    //new lable starts to fade in when we finish decelerating
     [UIView animateWithDuration:0.6 delay:0 options:UIViewAnimationOptionCurveEaseIn
                      animations:^{ self.animalLabel.alpha = self.animalLabel.alpha *1/0.6;}
                      completion:^(BOOL finished){ self.animalLabel.alpha = 1;}];
     CGFloat pageWidth = scrollView.frame.size.width;
     int page = floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+    //label name updates
     self.animalLabel.text = [[self.animals objectAtIndex:page] name];
 }
 
@@ -135,7 +141,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
