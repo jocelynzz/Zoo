@@ -16,6 +16,9 @@
 		598D5F451A67525300C2AFB5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 598D5F431A67525300C2AFB5 /* LaunchScreen.xib */; };
 		598D5F511A67525400C2AFB5 /* It_s_A_ZooTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 598D5F501A67525400C2AFB5 /* It_s_A_ZooTests.m */; };
 		598D5F5C1A67531D00C2AFB5 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 598D5F5B1A67531D00C2AFB5 /* Animal.m */; };
+		59BACE791A6DC77000BB4A2E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59BACE781A6DC77000BB4A2E /* AudioToolbox.framework */; };
+		59BACE7B1A6DC78300BB4A2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59BACE7A1A6DC78300BB4A2E /* Foundation.framework */; };
+		59DBC3181A6DC82E007F30E8 /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 59DBC3171A6DC82E007F30E8 /* sound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		598D5F5A1A6752D500C2AFB5 /* Animal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
 		598D5F5B1A67531D00C2AFB5 /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
 		59A128F61A69E0B200B90F37 /* UIScrollViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIScrollViewDelegate.h; sourceTree = "<group>"; };
+		59BACE781A6DC77000BB4A2E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		59BACE7A1A6DC78300BB4A2E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		59DBC3171A6DC82E007F30E8 /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59BACE7B1A6DC78300BB4A2E /* Foundation.framework in Frameworks */,
+				59BACE791A6DC77000BB4A2E /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +78,8 @@
 		598D5F281A67525300C2AFB5 = {
 			isa = PBXGroup;
 			children = (
+				59BACE7A1A6DC78300BB4A2E /* Foundation.framework */,
+				59BACE781A6DC77000BB4A2E /* AudioToolbox.framework */,
 				598D5F331A67525300C2AFB5 /* It's A Zoo */,
 				598D5F4D1A67525400C2AFB5 /* It's A ZooTests */,
 				598D5F321A67525300C2AFB5 /* Products */,
@@ -108,6 +118,7 @@
 		598D5F341A67525300C2AFB5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				59DBC3171A6DC82E007F30E8 /* sound.mp3 */,
 				598D5F351A67525300C2AFB5 /* Info.plist */,
 				598D5F361A67525300C2AFB5 /* main.m */,
 			);
@@ -212,6 +223,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59DBC3181A6DC82E007F30E8 /* sound.mp3 in Resources */,
 				598D5F401A67525300C2AFB5 /* Main.storyboard in Resources */,
 				598D5F451A67525300C2AFB5 /* LaunchScreen.xib in Resources */,
 				598D5F421A67525300C2AFB5 /* Images.xcassets in Resources */,

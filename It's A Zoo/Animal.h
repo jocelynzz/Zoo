@@ -17,8 +17,10 @@
 @property (nonatomic,strong) NSString *species;
 @property (nonatomic,strong) NSNumber *age;
 @property (nonatomic,strong) UIImage *image;
+@property (nonatomic,strong) NSString *soundPath;
 
 -(NSString *)description;
+
 
 @end
 

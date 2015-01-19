@@ -125,11 +125,10 @@
 
 }
 
-
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-    //new lable starts to fade in when we finish decelerating
-    [UIView animateWithDuration:0.6 delay:0 options:UIViewAnimationOptionCurveEaseIn
-                     animations:^{ self.animalLabel.alpha = self.animalLabel.alpha *1/0.6;}
+   // new lable starts to fade in when we finish decelerating
+    [UIView animateWithDuration:0.8 delay:0 options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{ self.animalLabel.alpha = self.animalLabel.alpha *1/0.8;}
                      completion:^(BOOL finished){ self.animalLabel.alpha = 1;}];
     CGFloat pageWidth = scrollView.frame.size.width;
     int page = floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;

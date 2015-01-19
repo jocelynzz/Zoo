@@ -8,10 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "Animal.h"
+#import <AudioToolbox/AudioToolbox.h>
 //#import "Animal.m"
 //#import "main.m"
 
 @interface ViewController : UIViewController<UIScrollViewDelegate>
+
+{
+    SystemSoundID PlaySoundID;
+}
+
+
 
 @end
 
