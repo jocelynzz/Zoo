@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59660FA01A6A404E00E7EFEF /* NSMutableArray+Shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = 59660F9F1A6A404E00E7EFEF /* NSMutableArray+Shuffle.m */; };
 		598D5F371A67525300C2AFB5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 598D5F361A67525300C2AFB5 /* main.m */; };
 		598D5F3A1A67525300C2AFB5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 598D5F391A67525300C2AFB5 /* AppDelegate.m */; };
 		598D5F3D1A67525300C2AFB5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 598D5F3C1A67525300C2AFB5 /* ViewController.m */; };
@@ -14,6 +15,7 @@
 		598D5F421A67525300C2AFB5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 598D5F411A67525300C2AFB5 /* Images.xcassets */; };
 		598D5F451A67525300C2AFB5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 598D5F431A67525300C2AFB5 /* LaunchScreen.xib */; };
 		598D5F511A67525400C2AFB5 /* It_s_A_ZooTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 598D5F501A67525400C2AFB5 /* It_s_A_ZooTests.m */; };
+		598D5F5C1A67531D00C2AFB5 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 598D5F5B1A67531D00C2AFB5 /* Animal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		59660F9E1A6A404E00E7EFEF /* NSMutableArray+Shuffle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+Shuffle.h"; path = "../NSMutableArray+Shuffle.h"; sourceTree = "<group>"; };
+		59660F9F1A6A404E00E7EFEF /* NSMutableArray+Shuffle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+Shuffle.m"; path = "../NSMutableArray+Shuffle.m"; sourceTree = "<group>"; };
 		598D5F311A67525300C2AFB5 /* It's A Zoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "It's A Zoo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		598D5F351A67525300C2AFB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		598D5F361A67525300C2AFB5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +44,9 @@
 		598D5F4A1A67525400C2AFB5 /* It's A ZooTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "It's A ZooTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		598D5F4F1A67525400C2AFB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		598D5F501A67525400C2AFB5 /* It_s_A_ZooTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = It_s_A_ZooTests.m; sourceTree = "<group>"; };
+		598D5F5A1A6752D500C2AFB5 /* Animal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
+		598D5F5B1A67531D00C2AFB5 /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
+		59A128F61A69E0B200B90F37 /* UIScrollViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIScrollViewDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +88,16 @@
 		598D5F331A67525300C2AFB5 /* It's A Zoo */ = {
 			isa = PBXGroup;
 			children = (
+				59660F9E1A6A404E00E7EFEF /* NSMutableArray+Shuffle.h */,
+				59660F9F1A6A404E00E7EFEF /* NSMutableArray+Shuffle.m */,
+				598D5F5B1A67531D00C2AFB5 /* Animal.m */,
+				598D5F5A1A6752D500C2AFB5 /* Animal.h */,
 				598D5F381A67525300C2AFB5 /* AppDelegate.h */,
 				598D5F391A67525300C2AFB5 /* AppDelegate.m */,
 				598D5F3B1A67525300C2AFB5 /* ViewController.h */,
 				598D5F3C1A67525300C2AFB5 /* ViewController.m */,
 				598D5F3E1A67525300C2AFB5 /* Main.storyboard */,
+				59A128F61A69E0B200B90F37 /* UIScrollViewDelegate.h */,
 				598D5F411A67525300C2AFB5 /* Images.xcassets */,
 				598D5F431A67525300C2AFB5 /* LaunchScreen.xib */,
 				598D5F341A67525300C2AFB5 /* Supporting Files */,
@@ -168,6 +180,7 @@
 				TargetAttributes = {
 					598D5F301A67525300C2AFB5 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 723KYE3F9E;
 					};
 					598D5F491A67525400C2AFB5 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -220,6 +233,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				598D5F3D1A67525300C2AFB5 /* ViewController.m in Sources */,
+				59660FA01A6A404E00E7EFEF /* NSMutableArray+Shuffle.m in Sources */,
+				598D5F5C1A67531D00C2AFB5 /* Animal.m in Sources */,
 				598D5F3A1A67525300C2AFB5 /* AppDelegate.m in Sources */,
 				598D5F371A67525300C2AFB5 /* main.m in Sources */,
 			);
@@ -343,7 +358,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "It's A Zoo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -353,7 +370,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "It's A Zoo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -412,6 +431,7 @@
 				598D5F561A67525400C2AFB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		598D5F571A67525400C2AFB5 /* Build configuration list for PBXNativeTarget "It's A ZooTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +440,7 @@
 				598D5F591A67525400C2AFB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

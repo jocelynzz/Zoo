@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Animal.h"
+//#import "Animal.m"
+//#import "main.m"
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController<UIScrollViewDelegate>
 
 @end
 
