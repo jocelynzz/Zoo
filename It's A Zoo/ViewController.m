@@ -125,7 +125,7 @@
 
 }
 
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
    // new lable starts to fade in when we finish decelerating
     [UIView animateWithDuration:0.8 delay:0 options:UIViewAnimationOptionCurveEaseIn
                      animations:^{ self.animalLabel.alpha = self.animalLabel.alpha *1/0.8;}

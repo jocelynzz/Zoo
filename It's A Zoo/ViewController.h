@@ -14,11 +14,13 @@
 
 @interface ViewController : UIViewController<UIScrollViewDelegate>
 
-{
-    SystemSoundID PlaySoundID;
-}
-
-
-
 @end
+
+//{
+//    SystemSoundID PlaySoundID;
+//}
+
+
+
+//@end
 
